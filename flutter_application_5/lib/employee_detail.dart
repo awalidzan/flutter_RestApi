@@ -28,8 +28,8 @@ class _EmployeeDetailState extends State<EmployeeDetail> {
 
   selectIdEmployee(String id) async {
     List data = [];
-    data = jsonDecode(await ds.selectId('6115e1be32c2a05a0b647a5f', 'office',
-        'employee', '6346875d99b6c11c094bd4ed', id));
+    data = jsonDecode(await ds.selectId('63476b4c99b6c11c094bd50f', 'office',
+        'employee', '63476cec99b6c11c094bd5ee', id));
     employee = data.map((e) => EmployeeModel.fromJson(e)).toList();
   }
 
@@ -154,10 +154,10 @@ class _EmployeeDetailState extends State<EmployeeDetail> {
                             Navigator.of(context).pop();
 
                             bool response = await ds.removeId(
-                                '6115e1be32c2a05a0b647a5f',
+                                '63476b4c99b6c11c094bd50f',
                                 'office',
                                 'employee',
-                                '6346875d99b6c11c094bd4ed',
+                                '63476cec99b6c11c094bd5ee',
                                 args[0]);
 
                             if (response) {

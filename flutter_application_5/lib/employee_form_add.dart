@@ -147,7 +147,7 @@ class _EmployeeFormAddState extends State<EmployeeFormAdd> {
                         backgroundColor: Colors.lightGreen, elevation: 0),
                     onPressed: () async {
                       List response = jsonDecode(await ds.insertEmployee(
-                          "",
+                          "63476cec99b6c11c094bd5ee",
                           name.text,
                           phone.text,
                           email.text,
@@ -194,8 +194,9 @@ class _EmployeeFormAddState extends State<EmployeeFormAdd> {
       setState(() {
         if (value == null) return;
 
-        final DateFormat formatter = DateFormat('dd-mmm-yyyy');
+        final DateFormat formatter = DateFormat('dd-MM-yyyy');
         final String formattedDate = formatter.format(value);
+        birthday.text = formattedDate;
       });
     }, onError: (error) {
       if (kDebugMode) {

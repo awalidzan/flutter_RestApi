@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:ffi';
+//import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_5/employee_model.dart';
@@ -58,7 +58,7 @@ class EmployeeListState extends State<EmployeeList> {
               child: GestureDetector(
                 onTap: () {
                   //navigator.pushNamed(context,)
-                  Navigator.pushNamed(context, 'employee_list_add')
+                  Navigator.pushNamed(context, 'employee_form_add')
                       .then(reloadDataEmployee);
                 },
                 child: const Icon(
